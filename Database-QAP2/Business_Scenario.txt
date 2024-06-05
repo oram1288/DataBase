@@ -1,0 +1,24 @@
+Business Scenario:
+
+A local sports league, "Mount Pearl Blades" organizes seasonal hockey tournaments.
+To manage the increasing number of teams and participants, Mount Pearl Blades needs 
+a database to store and manage its information effectively. The database will keep 
+track of team details, player profiles, match schedules, and results. For each player, 
+the database will store information such as name, age, contact details, and performance 
+statistics. Additionally, the database will maintain records of arenas, including 
+availability booking schedules and what rink each game is played in. This organized 
+system will help the Mount Pearl Blades manage its operations, ensure smooth scheduling, 
+and provide detailed performance analytics, ultimately improving the overall management 
+of the league.
+
+Entities:
+
+Players - Information on each player in the league 
+
+Teams - Information on the teams in the league 
+
+Games - Information on each game that it played (the team, date and time and final score)
+
+Arenas - The area and location the games are played 
+
+PlayerStats - Individual player stats (goals, assists, points, hits, penalty minutes)
