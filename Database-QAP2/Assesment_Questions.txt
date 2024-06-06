@@ -2,24 +2,25 @@
 to keep track of how many hours you have spent working on each individual part 
 of this assessment as best you can - an estimation is fine; we just want an idea.)
 
-- 
+- I did this QAP over 4 days and about 4 hours each day, roughly.
 
 2. What online resources you have used? (My lectures, YouTube, Stack overflow etc.)
 
-- 
+- your lectures and youtube videos.
 
 3. Did you need to ask any of your friends in solving the problems. (If yes, 
 please mention name of the friend. They must be amongst your class persons.)
 
-- 
+- no.
 
 4. Did you need to ask questions to any of your instructors? If so, how many 
 questions did you ask (or how many help sessions did you require)?
 
-- 
+- asked peter about how he would like the .sql files to be.
 
 5. Rate (subjectively) the difficulty of each question from your own perspective, 
 and whether you feel confident that you can solve a similar but different problem 
 requiring some of the same techniques in the future now that you have completed this one.
 
-- 
+- didn't find the QAP too bad, thought it was fun to create our own typ of scenario and
+create a database for it, the lucid website made it easier and fun as well to create everything.
