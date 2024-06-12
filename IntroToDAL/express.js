@@ -7,11 +7,6 @@ app.get("/", (request, response) => {
   console.log("root route.");
   response.send("the route for the sites root /.");
 });
-// app.get("/:duck", (request, response) => {
-//   console.log("root route with parameter.")
-//   console.log(`the parameter is: ${request.params.duck}`);
-//   response.send("the route for the sites root /.")
-// })
 
 const { getActorById } = require("./services/actors.dal");
 
