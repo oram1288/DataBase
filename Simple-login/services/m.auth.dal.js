@@ -7,55 +7,76 @@ async function getLogins() {
     const cursor = dal.db("Auth").collection("logins").find();
     const results = await cursor.toArray();
     return results;
-  } catch(error) {
+  } catch (error) {
     console.log(error);
   }
-};
+}
 async function getLoginByUsername(name) {
   try {
     await dal.connect();
-    const result = dal.db("Auth").collection("logins").findOne({"username": name});
+    const result = dal
+      .db("Auth")
+      .collection("logins")
+      .findOne({ username: name });
     return result;
-  } catch(error) {
+  } catch (error) {
     console.log(error);
   }
-};
+}
 async function getLoginByEmail(email) {
   try {
     await dal.connect();
-    const result = dal.db("Auth").collection("logins").findOne({ "email": email });
+    const result = dal
+      .db("Auth")
+      .collection("logins")
+      .findOne({ email: email });
     return result;
-  } catch(error) {
+  } catch (error) {
     console.log(error);
   }
-};
+}
 async function getLoginById(id) {
   try {
     await dal.connect();
-    const result = dal.db("Auth").collection("logins").findOne({ _id: new ObjectId(id) });
+    const result = dal
+      .db("Auth")
+      .collection("logins")
+      .findOne({ _id: new ObjectId(id) });
     return result;
-  } catch(error) {
+  } catch (error) {
     console.log(error);
   }
-};
+}
 
 async function addLogin(name, email, password, uuidv4) {
-  let newLogin = JSON.parse(`{ "username": "` + name + `", "email": "` + email + `", "password": "` + password + `", "uuid": "` + uuidv4 + `" }`);
+  let newLogin = JSON.parse(
+    `{ "username": "` +
+      name +
+      `", "email": "` +
+      email +
+      `", "password": "` +
+      password +
+      `", "uuid": "` +
+      uuidv4 +
+      `" }`
+  );
   try {
     await dal.connect();
-    const result = await dal.db("Auth").collection("logins").insertOne(newLogin);
+    const result = await dal
+      .db("Auth")
+      .collection("logins")
+      .insertOne(newLogin);
     return result.insertedId;
-  } catch(error) {
-    if(error.code === 11000)
-      return error.code;
+  } catch (error) {
+    if (error.code === 11000) return error;
     console.log(error);
   }
-};
+}
 
 module.exports = {
-    getLogins,
-    getLoginByUsername,
-    addLogin,
-    getLoginByEmail, 
-    getLoginById,
-  }
+  getLogins,
+  getLoginByUsername,
+  addLogin,
+  getLoginByEmail,
+  getLoginById,
+};
